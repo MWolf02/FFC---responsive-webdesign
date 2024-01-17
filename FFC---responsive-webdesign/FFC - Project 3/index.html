@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical documentation page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="nav-heading">Python Documentation</header>
+      <ul class="nav-ul">
+        <li>
+          <a href="#Introduction_to_Python" class="nav-link"
+            >Introduction to Python</a
+          >
+        </li>
+        <li>
+          <a href="#Variables_in_Python" class="nav-link"
+            >Variables in Python</a
+          >
+        </li>
+        <li>
+          <a href="#Variable_Scope_in_Python" class="nav-link"
+            >Variable Scope in Python</a
+          >
+        </li>
+        <li>
+          <a href="#Constants_in_Python" class="nav-link"
+            >Constants in Python</a
+          >
+        </li>
+        <li>
+          <a href="#Data_Types_in_Python" class="nav-link"
+            >Data Types in Python</a
+          >
+        </li>
+        <li>
+          <a href="#Reference" class="nav-link">Reference</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction_to_Python">
+        <header>Introduction to Python</header>
+        <div class="section-container">
+          <p>
+            Python is a versatile, high-level, interpreted programming language
+            known for its simplicity and readability. It is widely used for web
+            development, data science, artificial intelligence, automation, and
+            more. Python's design philosophy emphasizes code readability and
+            ease of use, making it an excellent choice for beginners and
+            experienced developers alike.
+          </p>
+          <p>
+            Python comes with a comprehensive standard library that includes
+            modules and packages for various functionalities. Additionally, it
+            supports object-oriented, imperative, and functional programming
+            paradigms.
+          </p>
+          <h2>What you should already know</h2>
+          <p>This guide assumes you have the following basic background:</p>
+          <ul>
+            <li>A general understanding of programming concepts.</li>
+            <li>
+              Familiarity with basic programming constructs such as variables,
+              control structures, and functions.
+            </li>
+          </ul>
+          <p>
+            If you are new to programming, consider exploring introductory
+            tutorials available on the main Python documentation page.
+          </p>
+        </div>
+        <div class="section-container">
+          <h2>Python and Other Languages</h2>
+          <p>
+            While Python shares similarities with other programming languages,
+            it has distinct features that set it apart. Unlike statically-typed
+            languages like Java, Python is dynamically typed, meaning variable
+            types are determined at runtime. Python's syntax is clear and
+            expressive, making it more concise compared to languages like Java.
+          </p>
+        </div>
+        <div class="section-container">
+          <h2>Hello World in Python</h2>
+          <p>
+            To get started with writing Python, open a Python interpreter or use
+            a script and write your first "Hello world" Python code:
+          </p>
+          <pre>
+                <code>
+                    def greet_me(your_name):
+                    print("Hello", your_name)
+                    greet_me("World")
+                </code>
+            </pre>
+          <p>Run the script, and you'll see the output in your console!</p>
+        </div>
+      </section>
+      <section class="main-section" id="Variables_in_Python">
+        <header>Variables in Python</header>
+        <div class="section-container">
+          <p>
+            Variables in Python are used to store and represent data. Unlike
+            languages that require explicit declaration of data types, Python
+            dynamically assigns types to variables.
+          </p>
+          <h2>Declaring Variables</h2>
+          <p>
+            You can declare a variable in Python by simply assigning it a value:
+          </p>
+          <pre>
+            <code>
+                x = 42  # Global variable
+                y = 13  # Local variable
+            </code>
+        </pre>
+          <p>
+            Python also supports block scope local variables using the let
+            keyword:
+          </p>
+          <pre>
+            <code>
+                let z = 5  # Block scope local variable
+            </code>
+        </pre>
+        </div>
+      </section>
+      <section class="main-section" id="Variable_Scope_in_Python">
+        <header>Variable Scope in Python</header>
+        <div class="section-container">
+          <p>
+            Python distinguishes between global and local variable scopes.
+            Variables declared outside any function are global, accessible
+            throughout the script. Variables declared within a function are
+            local, accessible only within that function.
+          </p>
+          <p>In Python, block statements do not introduce a new scope.</p>
+          <pre>
+            <code>
+              global_variable = 10  # Global variable
+      
+              def my_function():
+                  local_variable = 5  # Local variable
+                  print(global_variable)
+      
+              my_function()
+              # print(local_variable)  # Raises NameError as local_variable is not defined globally
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section class="main-section" id="Constants_in_Python">
+        <header>Constants in Python</header>
+        <div class="section-container">
+          <p>
+            Constants in Python are used to represent fixed values that do not
+            change during the execution of a program. They provide a way to give
+            meaningful names to such values, making the code more readable.
+          </p>
+          <h2>Declaring Constants</h2>
+          <p>
+            You can create constants in Python using the const keyword.
+            Constants, once assigned a value, cannot be changed during runtime.
+          </p>
+          <pre>
+            <code>
+                PI = 3.14
+                SPEED_OF_LIGHT = 299792458  # in meters per second
+            </code>
+        </pre>
+          <p>
+            Constants in Python follow the same scope rules as block scope
+            variables.
+          </p>
+        </div>
+      </section>
+      <section class="main-section" id="Data_Types_in_Python">
+        <header>Data Types in Python</header>
+        <div class="section-container">
+          <p>Python supports various data types, including:</p>
+          <ul>
+            <li>Boolean: True and False</li>
+            <li>None: A special keyword denoting a null value</li>
+            <li>Numeric types: Integers, floating-point numbers</li>
+            <li>String: Enclosed in single or double quotes</li>
+            <li>List, Tuple, Set, and Dictionary: Collection types</li>
+            <li>Object: The base type for all classes</li>
+          </ul>
+          <h2>Control Structures in Python</h2>
+          <h3>if...else Statement</h3>
+          <p>
+            Use the if statement to execute a block of code if a condition is
+            true. Optionally, use the else clause to execute a different block
+            if the condition is false.
+          </p>
+          <pre>
+            <code>
+                if condition:
+                   statement_1
+                else:
+                   statement_2
+            </code>
+          </pre>
+          <p>You can also use elif for multiple conditions:</p>
+          <pre>
+            <code>
+                if condition_1:
+                   statement_1
+                elif condition_2:
+                   statement_2
+                else:
+                   statement_last
+            </code>
+          </pre>
+          <h3>while Statement</h3>
+          <p>
+            The while statement executes a block of code as long as a specified
+            condition is true.
+          </p>
+          <pre>
+            <code>
+                while condition:
+                    statement
+            </code>
+          </pre>
+          <p>The loop continues until the condition becomes false.</p>
+        </div>
+        <div class="section-container">
+          <h2>Function Declarations in Python</h2>
+          <p>
+            A function in Python is defined using the def keyword, followed by
+            the function name, arguments, and the block of code.
+          </p>
+          <pre>
+                <code>
+                    def square(number):
+                        return number * number
+                </code>
+          </pre>
+          <p>
+            Functions can have various parameters, including primitive types and
+            objects. Python supports both pass-by-value and pass-by-reference
+            semantics, depending on the data type.
+          </p>
+        </div>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <p>
+          All the information in this document is adapted from the official
+          Python documentation and is available on the Python Software
+          Foundation's website.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1 - Survey form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">How much do you travel?</h1>
+      <p id="description">
+        Thank you for taking the time to answer these few questions about your
+        travel experience
+      </p>
+    </header>
+    <main>
+      <form action="" id="survey-form">
+        <fieldset>
+          <legend>Your Information</legend>
+          <label id="name-label" for="name">
+            Name:
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </label>
+          <label id="email-label" for="email">
+            Email:
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
+          </label>
+          <label id="number-label" for="number">
+            Age:
+            <input
+              type="number"
+              id="number"
+              placeholder="Age"
+              min="13"
+              max="100"
+              required
+            />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Question 1</legend>
+          <label for="dropdown">
+            Where are you from?
+            <select name="dropdown" id="dropdown">
+              <option value="">Choose one...</option>
+              <option value="1">US</option>
+              <option value="2">UK</option>
+              <option value="3">Europe</option>
+              <option value="4">Asia</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Question 2</legend>
+          <label>
+            Have you been to other countries?
+            <input
+              class="inline"
+              type="radio"
+              name="choose"
+              id="radio1"
+              value="option1"
+              checked
+            />Yes
+            <input
+              class="inline"
+              type="radio"
+              name="choose"
+              id="radio2"
+              value="option2"
+            />No
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Question 3</legend>
+          <label>
+            How many countries have you been to? (Choose 1):
+            <input class="inline" type="checkbox" value="a" id="checkboxA" />1-2
+            <input class="inline" type="checkbox" value="b" id="checkboxB" />2-4
+            <input class="inline" type="checkbox" value="c" id="checkboxC" />4-6
+            <input class="inline" type="checkbox" value="d" id="checkboxD" />6-8
+            <input
+              class="inline"
+              type="checkbox"
+              value="e"
+              id="checkboxE"
+            />8-10
+            <input class="inline" type="checkbox" value="f" id="checkboxF" />10+
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Final comments</legend>
+          <label for="comment">
+            Enter your comment here:
+            <textarea
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="I have been to..."
+            ></textarea>
+          </label>
+        </fieldset>
+
+        <div>
+          <input type="submit" id="submit" value="Submit"/>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
